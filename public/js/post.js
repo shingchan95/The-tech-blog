@@ -1,6 +1,6 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
-
+  console.log(event.target.parentElement)
   const title = document.querySelector('#project-name').value.trim();
   const description = document.querySelector('#project-desc').value.trim();
 
