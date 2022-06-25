@@ -7,9 +7,11 @@
     <p>{{post.description}}</p>
     <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
     <ul>      
+
 {{#each post.comments}}
-      <li>{{comment}} comment by {{comment.user.name}}</li> 
+      <li>{{comment}} comment by {{user.name}}</li> 
 {{/each}}
+
     </ul> 
   </div>
   <div class="col-md-7">
@@ -26,10 +28,10 @@
         <button type="submit" class="btn btn-primary add-button" >Add</button>
       </div>
 </form>
+{{/each}}
 <div class="form-group">
   <button type="submit" class="btn btn-primary">Create</button>
 </div>
-{{/each}}
 
 
 <script src="./js/comment.js"></script>
