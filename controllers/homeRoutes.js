@@ -57,29 +57,6 @@ router.get('/', async (req, res) => {
 
 
 
-// router.get('/profile', async (req, res) => {
-//   try {
-//     // Get all projects and JOIN with user data
-//     const postData = await Post.findAll({
-//       include: [
-//         {
-//           model: Comment,
-//           attributes: ['comment'],
-//         },
-//       ],
-//     });
-
-//     const posts = postData.get({ plain: true });
-
-//     res.render('profile', {
-//       ...posts,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
  // Use withAuth middleware to prevent access to route
  router.get('/profile', withAuth, async (req, res) => {
    try {
