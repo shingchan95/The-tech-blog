@@ -8,7 +8,7 @@
     <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
     <ul>      
 {{#each post.comments}}
-      <li>{{comment}}</li> 
+      <li>{{comment}} comment by {{comment.user.name}}</li> 
 {{/each}}
     </ul> 
   </div>
