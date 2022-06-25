@@ -1,16 +1,23 @@
-<div class="comment-form">
-    <form class="form new-project-form comment-form-container">
-    <h3>Create a New Post:</h3>
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h1>{{posts.title}}</h1>
+    <p>{{posts.description}}</p>
+    <p>Created by {{posts.user.name}} on {{format_date posts.date_created}}</p>
+    <ul>      
+{{#each posts.comments as |comments|}}
+      <li>{{comments.comment}} comment by {{comments.user.name}}</li> 
+{{/each}}
+    </ul>
+
+ <form class="form new-comment-form" id="{{posts.id}}" >
       <div class="form-group">
-        <label for="project-name">Title:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+        <label for="project-comment">comment:</label>
+        <textarea class="form-input" id="project-comment" name="project-comment"></textarea>
       </div>
       <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        <button type="submit" class="btn btn-primary add-button"  id="{{posts.id}}">Add Comment</button>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
+</form>
+
+
+<script src="../js/comment.js"></script>

@@ -21,12 +21,13 @@
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
+        <a href="/login">profile</a> |
         <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-      <h2>WELCOME!</h2>
+
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
