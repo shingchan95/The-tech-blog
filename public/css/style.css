@@ -17,8 +17,27 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+
+.post-footer p{
+  font-weight: 100;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.display-view{
+
+  margin: 20px 0px 60px;
+  
+}
+
+.display-view p{
+  margin: 0px 0px 60px;
+  
+}
+.title{
+  font-size: 18px;
+
+}
+.welcome{
+  text-align: center;
 }

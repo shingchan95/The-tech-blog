@@ -1,13 +1,16 @@
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h1>{{posts.title}}</h1>
-    <p>{{posts.description}}</p>
-    <p>Created by {{posts.user.name}} on {{format_date posts.date_created}}</p>
-    <ul>      
-{{#each posts.comments as |comments|}}
-      <li>{{comments.comment}} comment by {{comments.user.name}}</li> 
-{{/each}}
-    </ul>
+  <h1 class="title">{{posts.title}}</h1>
+<div class="display-view" >
+  <p>{{posts.description}}</p>
+  <div class="post-footer"><p>Created by {{posts.user.name}} on {{format_date posts.date_created}}</p></div>
+          
+  {{#each posts.comments as |comments|}}
+    <div>
+        <p>{{comments.comment}}</p> 
+        <div class="post-footer"><p>comment by {{comments.user.name}} on {{format_date comments.date_created}}</p></div> 
+    </div>
+  {{/each}}
+</div>
+
 
  <form class="form new-comment-form" id="{{posts.id}}" >
       <div class="form-group">
